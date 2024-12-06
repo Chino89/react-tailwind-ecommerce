@@ -1,17 +1,21 @@
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
-function SignIn() {
+function Register() {
   const {
     register,
+    formState: { errors, dirtyFields, touchedFields },
     handleSubmit,
-    formState: { errors, isValid, dirtyFields, touchedFields },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      mode: "onChange",
+      checkbox: false,
+    },
+  });
   const onSubmit = (data) => console.log(data);
 
   return (
     <div className="h-screen flex flex-col justify-center items-center">
-      <h2>Hi! We have missed you</h2>
+      <h2>Hello, and Wellcome to Shopi!</h2>
       <div className="w-80 h-auto border border-black rounded-lg p-6">
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -58,27 +62,25 @@ function SignIn() {
                 Remember to complete this field.
               </p>
             ))}
-          <button
-            disabled={!isValid}
-            className={`py-2 w-full rounded-lg ${
-              isValid ? "bg-green-300" : "bg-slate-300"
-            }`}
-          >
-            Sign in
-          </button>
-          <Link className="text-center text-sm mt-6" to={"/register"}>
-            <a className="hover:decoration-blue-500 hover:underline hover:underline-offset-4">
-              You don&apos;t have an account yet?
-            </a>
-          </Link>
-
+          <div className="flex gap-1">
+            <input
+              type="checkbox"
+              {...register("checkbox", {
+                required: "You should check our terms and conditions",
+              })}
+            />
+            <label htmlFor="checkbox"> Our terms and conditions</label>
+          </div>
           <p className="text-red-700 text-sm text-center">
             {errors.checkbox?.message}
           </p>
+          <button className="py-2 w-full rounded-lg bg-green-300">
+            Sign up
+          </button>
         </form>
       </div>
     </div>
   );
 }
 
-export default SignIn;
+export default Register;
