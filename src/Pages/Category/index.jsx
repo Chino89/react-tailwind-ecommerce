@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "../../Components/Layout";
 import Card from "../../Components/Card";
-import { ShoppiCartContext } from "../../Context";
+import { ShoppiCartContext } from "../../Context/productContext";
 
 function CategoryPage() {
   const { category } = useParams();

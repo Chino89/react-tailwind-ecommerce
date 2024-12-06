@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { ShoppiCartContext } from "../../Context";
+import { ShoppiCartContext } from "../../Context/productContext";
 
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 

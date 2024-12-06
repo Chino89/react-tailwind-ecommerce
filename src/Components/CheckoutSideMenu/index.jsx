@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { ShoppiCartContext } from "../../Context";
+import { ShoppiCartContext } from "../../Context/productContext";
 import OrderCard from "../OrderCard";
 import { getDate, totalPrice } from "../../Utils";
 import "./CheckoutSideMenu.css";

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
-import { ShoppiCartContext } from "../../Context";
+import { ShoppiCartContext } from "../../Context/productContext";
 
 import { CheckIcon, PlusIcon } from "@heroicons/react/24/outline";
 

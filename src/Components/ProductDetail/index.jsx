@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./ProductDetail.css";
-import { ShoppiCartContext } from "../../Context";
+import { ShoppiCartContext } from "../../Context/productContext";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 function ProductDetail() {
@@ -28,7 +28,9 @@ function ProductDetail() {
         />
       </figure>
       <p className="flex flex-col p-6">
-        <span className="font-medium text-2xl my-2">${productToShow.price}</span>
+        <span className="font-medium text-2xl my-2">
+          ${productToShow.price}
+        </span>
         <span className="font-medium text-md">{productToShow.title}</span>
         <span className="font-light text-sm">{productToShow.description}</span>
       </p>

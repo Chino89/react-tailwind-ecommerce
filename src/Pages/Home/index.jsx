@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ShoppiCartContext } from "../../Context";
+import { ShoppiCartContext } from "../../Context/productContext";
 import Card from "../../Components/Card";
 import Layout from "../../Components/Layout";
 import ProductDetail from "../../Components/ProductDetail";

@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { CalendarDateRangeIcon } from "@heroicons/react/24/outline";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
-import { ShoppiCartContext } from "../../Context";
+import { ShoppiCartContext } from "../../Context/productContext";
 
 function OrdersCard({ totalPrice, totalProducts, id }) {
   const { order } = useContext(ShoppiCartContext);
